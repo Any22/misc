@@ -1,0 +1,206 @@
+body, html {
+    height: 100%;
+    width:100%
+}
+*{
+  margin:0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* .main_body{
+  flex: 1;
+} */
+
+/* The hero image */
+.hero-image {
+  /* Using "linear-gradient" to add a darken background effect to the image */
+     
+      background-image: linear-gradient(rgba(0,168,255, 0.3), rgba(0, 168, 255, 0.2)), url("bkimage.jpeg");
+
+  /* Set a specific height */
+  height: 90%;
+  clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0 75%, 0 0);
+  /* Position and center the image to scale nicely on all screens */
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: left;
+  position:relative;
+  top: 45%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: white;
+  }
+
+  /* article {
+    display: -webkit-flex;
+    display: flex;
+  } */
+
+   .intro{
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    /* background-color: #eec4c9; */
+    padding: 10px;
+    text-align: justify;
+  }
+  .skills{
+    display:flex ;
+    flex-direction: row;
+  }
+  .card1 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 250px;
+    height:300px;
+    margin: 60px;
+    border-radius: 20px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  }
+  
+  /* Add some padding inside the card container */
+  .container1 {
+    padding: 2px 16px;
+    text-align: center;
+  }
+  .card2 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 250px;
+    height:300px;
+    margin: 60px;
+    border-radius: 20px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  }
+  
+  /* Add some padding inside the card container */
+  .container2 {
+    padding: 2px 16px;
+    text-align: center;
+  }
+  .card3 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:250px;
+    height:300px;
+    margin: 60px;
+    border-radius: 20px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  }
+  
+  /* Add some padding inside the card container */
+  .container3 {
+    padding: 2px 16px;
+    text-align: center;
+  }
+
+  .card4 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 250px;
+    height:300px;
+    margin: 60px;
+   
+    border-radius:20px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card4:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  }
+  
+  /* Add some padding inside the card container */
+  .container4 {
+    padding: 2px 16px;
+    text-align: center;
+  }
+
+  .contact_icon ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 450px;
+    margin-top: 300px
+}
+
+/* .gap {
+    margin-right: 10px
+} 
+
+.contact_icon ul li:first-child {
+    margin-left: 0px
+} 
+
+.facebook {
+    background: #2a66b3;
+    border: 1px solid #2a66b3
+}
+.social_icon2 ul li a i {
+  margin-right: 10px
+}
+
+.twitter {
+  background: #35bbec;
+  border: 1px solid #35bbec
+}
+
+.social_icon2 ul li a {
+  float: left;
+  border-radius: 4px;
+  line-height: 40px;
+  color: #fff;
+  height: 40px;
+  width: 110px;
+  text-align: center;
+  margin-bottom: 40px
+}
+
+.google {
+  background: #e55644;
+  border: 1px solid #e55644
+}
+
+.facebook:hover {
+  background: #082b58;
+  border: 1px solid #082b58
+}
+
+.twitter:hover {
+  background: #0f607e;
+  border: 1px solid #0f607e
+}
+
+.google:hover {
+  background: #a52a1b;
+  border: 1px solid #a52a1b
+} */
+
+footer{
+  background-image: linear-gradient(rgba(0,168,255, 0.3), rgba(26, 73, 97, 0.2));
+}
