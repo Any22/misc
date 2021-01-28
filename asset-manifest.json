@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Any22/Any22.github.io.git/static/css/main.92ada389.chunk.css",
+    "main.js": "/Any22/Any22.github.io.git/static/js/main.7f8542f5.chunk.js",
+    "main.js.map": "/Any22/Any22.github.io.git/static/js/main.7f8542f5.chunk.js.map",
+    "runtime-main.js": "/Any22/Any22.github.io.git/static/js/runtime-main.1b4cd5ec.js",
+    "runtime-main.js.map": "/Any22/Any22.github.io.git/static/js/runtime-main.1b4cd5ec.js.map",
+    "static/js/2.995078cb.chunk.js": "/Any22/Any22.github.io.git/static/js/2.995078cb.chunk.js",
+    "static/js/2.995078cb.chunk.js.map": "/Any22/Any22.github.io.git/static/js/2.995078cb.chunk.js.map",
+    "index.html": "/Any22/Any22.github.io.git/index.html",
+    "static/css/main.92ada389.chunk.css.map": "/Any22/Any22.github.io.git/static/css/main.92ada389.chunk.css.map",
+    "static/js/2.995078cb.chunk.js.LICENSE.txt": "/Any22/Any22.github.io.git/static/js/2.995078cb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b4cd5ec.js",
+    "static/js/2.995078cb.chunk.js",
+    "static/css/main.92ada389.chunk.css",
+    "static/js/main.7f8542f5.chunk.js"
+  ]
+}
