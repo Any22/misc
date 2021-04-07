@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="contact.css" />
+    <!-- https://www.youtube.com/watch?v=U9T6YkEDkMo -->
+    <!-- https://mdbootstrap.com/docs/jquery/navigation/hamburger-menu/ -->
+    <title>validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Doctor's Appointment</h1>
+      <form>
+        <!-- First name will go here -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-25">
+              <span id="mandatorField" style="color: white">*</span>
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name.."
+              />
+              <span id="nmErrMsg"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second name will go here -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-25">
+              <span id="mandatorField1" style="color: white">*</span>
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name.."
+              />
+              <span id="nmErrMsg1"></span>
+            </div>
+          </div>
+        </div>
+        <!-- geneder selection will go here -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-25">
+              <span id="mandatorField4" style="color: white">*</span>
+              <label for="gender">Gender</label>
+            </div>
+            <div class="col-55">
+              <input type="checkbox" id="male" />
+            </div>
+            <div class="col-70">
+              <label for="gender" id="male1">Male</label>
+            </div>
+
+            <div class="col-60">
+              <input type="checkbox" id="female" />
+            </div>
+            <div class="col-70">
+              <label for="gender" id="female1">Female</label>
+            </div>
+          </div>
+        </div>
+        <!-- Appointment will go here -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-25">
+              <span id="mandatorField2" style="color: white">*</span>
+              <label for="duedate">Date</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="date"
+                class="form-control"
+                id="dDate"
+                min="new"
+                Date()
+                required
+              />
+              <span id="nmErrMsg2"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Dr's name will go here -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-25">
+              <span id="mandatorField3" style="color: white">*</span>
+              <label for="dname">GP's Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="dname"
+                name="dname"
+                placeholder="Your GP's name.."
+              />
+              <span id="nmErrMsg3"></span>
+            </div>
+          </div>
+        </div>
+        <!-- type of appointment will go here -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-25">
+              <label for="option">Appointment</label>
+            </div>
+            <div class="col-75">
+              <select id="options" name="country">
+                <option value="online">Online</option>
+                <option value="call">Phone call</option>
+                <option value="personal">Personal</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- description will go here -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-25">
+              <span id="mandatorField5" style="color: white">*</span>
+              <label for="message">Message</label>
+            </div>
+            <div class="col-75">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write something.."
+                style="height: 200px"
+              ></textarea>
+              <span id="nmErrMsg4"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <button type="button" class="btn btn-primary" id="sbmt">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/9f86d71ef6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="clinic.css" />
+    <!-- https://www.youtube.com/watch?v=oLgtucwjVII -->
+    <title>Medical center</title>
+  </head>
+  <body onload="getdata()">
+    <div class="header">
+      <img class="medi" src="../images/Medicare@2x.jpg" alt="medicare" />
+      <img class="acc" src="../images/AGPAL.jpg" alt="gpractice" />
+      <h4>
+        <span><i class="fa fa-phone"></i></span> Call: (03) 97866367
+      </h4>
+    </div>
+    <br />
+    <div class="covidUpdate">
+      <div class="covidTxt">
+        <span><i class="fa fa-exclamation-triangle"></i></span>
+        <h3>Covid Update</h3>
+        <br />
+        <div id="covid-summary-results" class="results">
+          <button id="resbtn">Global Data</button>
+        </div>
+        <br/>
+        <div class="showResponse">
+          <div class="cases"> 
+            <label>New Confirmed</label>
+              <div class="confirmedCases"> 
+                <output id="confirmedCasesFigure"></output> 
+              </div> 
+              
+            <label>New Deaths</label>
+              <div class="newDeaths">
+                <output id="newDeathsFigure"></output>
+              </div>
+
+            <label>New Recovered </label>
+              <div class="newRecovered">
+                <output id="newRecoveredFigure"></output>
+              </div>
+          </div>
+          <div class="totalCases">
+            <label>Total Confirmed </label>
+              <div class="totalConfirmed">
+                <output id="totalConfirmedFigure"></output>
+              </div>
+        
+            <label>Total Deaths</label>
+              <div class="totaldeaths">
+                <output id="tdeaths" style ></output>
+              </div>
+
+            <label>Total Recovered</label>
+              <div class="totalRecovered">
+                <output id="totalRecoveredFigure"></output>
+              </div>
+          </div>
+              <!-- <label for="country">Australia:</label> -->
+                <button type="button" id="aus-Btn">Australia</button>
+                <div class="australianResponse">
+                  <div class="ozCase">
+                    <div id="newConfirmedOz">
+                      <lable>New Confirmed </lable>
+                      <output id="oZResponse"></output>
+                    </div>
+                     <div id="newDeathsOz">
+                       <lable>New Deaths </lable>
+                      <output id="oZResponse1"></output>
+                     </div>
+                      <div id="newRecoveredOz">
+                        <lable>New Recovered </lable>
+                       <output id="oZResponse2"></output>
+                      </div>
+                      
+                  </div>
+                  
+                </div>
+       </div>
+    </div>
+    <!-- nav bar starts here -->
+    <!-- <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo"><i class="fa fa-user-md"></i></label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav> -->
+    <!-- navbar ends here -->
+
+    <div class="our-services">
+      <!-- <span><i class="fa fa-hand-holding-medical"></i></span> -->
+      <h3>Our Services</h3>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img class="services" src="../images/gp.jpg" alt="GP" style="width: 100%" />
+          <!-- <div class="text">Ambulance Services</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="services"
+            src="../images/women.jpg"
+            alt="women"
+            style="width: 100%"
+          />
+          <!-- <div class="text">Immunization Services</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img class="services" src="/images/men.jpg" alt="men" style="width: 100%" />
+          <!-- <div class="text">Maternity</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="services"
+            src="../images/children.jpg"
+            alt="children"
+            style="width: 100%"
+          />
+          <!-- <div class="text">Triage</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="services"
+            src="../images/immunization.jpg"
+            alt="immunization"
+            style="width: 100%"
+          />
+          <!-- <div class="text">Women's Health</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="services"
+            src="../images/mentalhealth.jpg"
+            alt="mentalhealth"
+            style="width: 100%"
+          />
+          <!-- <div class="text">Women's Health</div> -->
+        </div>
+        <br />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus,
+          fugiat tenetur quae voluptatum autem sequi eum fuga animi ullam, amet
+          exercitationem magnam nostrum id quisquam quaerat cum esse adipisci
+          fugit. Tempore quis debitis, quos autem perspiciatis dolorum, modi
+          corporis, porro laboriosam quasi harum eaque totam. Reiciendis maiores
+        </p>
+      </div>
+      <!-- <br /> -->
+
+      <!-- <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div> -->
+
+      <div class="service-name">
+        <ul class="service-category">
+          <li class="service-list1">General Practice</li>
+          <li class="service-list2">Women Health</li>
+          <li class="service-list1">Man Health</li>
+          <li class="service-list2">Children's Health</li>
+          <li class="service-list1">Immunization</li>
+          <li class="service-list2">Mental Health</li>
+          <li class="service-list1">Sports Injuries</li>
+          <li class="service-list2">Dental Health</li>
+          <li class="service-list1">Laboratory</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- booking fixed button -->
+    <button
+      class="button"
+      id="bookBtn"><a href="./contact.html">Book</a></button>
+  
+    <!-- team starts here -->
+
+    <!-- <span class="team"><i class="fas fa-user-nurse"></i></span> -->
+    <div class="proJect" id="proj">
+      <!-- <span class="team"><i class="fas fa-user-md"></i></span> -->
+      <h3>Our Team</h3>
+      <div class="cardcontainer">
+        <div class="card-deck">
+          <!-- card #1 -->
+          <div class="card mb-4">
+            <img
+              class="card-img-top img-fluid"
+              src="../images/drabc.jpg"
+              alt="profile"
+              width="400"
+              height="350"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Dr. Abc</h4>
+              <p class="glow">General Practitioner, M.B.B.S</p>
+              <section>
+                <a
+                  href="./contact.html"
+                  class="btn btn-primary"
+                  ><span>Book</span></a
+                >
+                <button id="detailBtn">Profile</button>
+                <div id="myModal" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <!-- <p>This is a fully responsive profile page</p> -->
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- card #2 -->
+          <div class="card mb-4">
+            <img
+              class="card-img-top img-fluid"
+              src="../images/Dr-Colman-Fung.jpg"
+              alt="companyprofile"
+              width="400"
+              height="350"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Dr. Def</h4>
+              <p class="glow">General Practitioner M.D. FRACGP</p>
+              <p class="card-text"></p>
+              <section>
+                <a
+                  href="./contact.html"
+                  class="btn btn-primary"
+                  ><span>Book</span></a
+                >
+                <button id="detailBtn1">Profile</button>
+                <div id="myModal1" class="modal1">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close1">&times;</span>
+                    <!-- <p>This is a fully responsive profile page</p> -->
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- card #3 -->
+          <div class="w-100 d-none d-sm-block d-md-none">
+            <!-- wrap every 2 on sm-->
+          </div>
+          <div class="card mb-4">
+            <img
+              class="card-img-top img-fluid"
+              src="../images/drmike.jpg"
+              alt="taskplanner"
+              width="400"
+              height="350"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Dr. Mike</h4>
+              <p class="card-text">General Practitioner MBBS, FRACGP</p>
+              <section>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  ><span>Book</span></a
+                >
+                <button id="detailBtn2">Profile</button>
+                <div id="myModal2" class="modal2">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close2">&times;</span>
+                    <p>Dip Child Health, Cert Skin</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- card #4 -->
+          <div class="w-100 d-none d-md-block d-lg-none">
+            <!-- wrap every 3 on md -->
+          </div>
+          <div class="card mb-4">
+            <img
+              class="card-img-top img-fluid"
+              src="../images/ladydr.jpeg"
+              alt="Recipe"
+              width="400"
+              height="350"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Dr. Alexa</h4>
+              <p class="card-text">BDS, Dentist</p>
+              <section>
+                <a
+                  href="./contact.html"
+                  class="btn btn-primary"
+                  ><span>Book</span></a
+                >
+                <button id="detailBtn3">Profile</button>
+                <div id="myModal3" class="modal3">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close3">&times;</span>
+                    <p></p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- wrapper with animation -->
+    <div class="wrapper">
+      <div class="sliding-background"></div>
+    </div>
+    <!-- footer starts here -->
+    <footer>
+      <div class="main-footer-content">
+        <div class="row1">
+          <div class="col1">
+            <div class="medAuthorities">
+              <img class="medi" src="../images/Medicare@2x.jpg" alt="medicare" />
+              <img class="acc" src="../images/AGPAL.jpg" alt="gpractice" />
+            </div>
+          </div>
+          <div class="col1">
+            <div class="book">
+              <button class="btn btn-primary" id="booking"><a href="./contact.html">Book</a></button>
+            </div>
+          </div>
+
+          <div class="col1">
+            <div class="social_link" id="contact_icon">
+              <ul>
+                <li>
+                  <a href="mailto:abcclinic@gmail.com" target="_top"
+                    ><span class="fa fa-at"></span> Send us email</a
+                  >
+                </li>
+
+                <li>
+                  <a href="#"
+                    ><span><i class="fa fa-phone"></i></span> Call: (03) 9709
+                    6007</a
+                  >
+                </li>
+
+                <li>
+                  <a href="#"
+                    ><span>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </span>
+                    Xyz street,Wxy land, Victoria 3xxx</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="col1">
+            <div class="menuFooter1">
+              <a href="#">About us</a><br />
+              <a href="#">Bulk billing </a> <br />
+              <a href="#">Contact</a><br />
+              <a href="#">Our Services</a> <br />
+              <a href="#">Polices</a> <br />
+              <a href="#">Support</a> <br />
+            </div>
+          </div>
+
+          <h3>Working hours</h3>
+          <div class="col1">
+            <div class="workinHours">
+              <!-- <h3>Working hours</h3> -->
+
+              <table>
+                <tr>
+                  <th>Monday</th>
+                  <td>8:30am - 5:30pm</td>
+                </tr>
+                <tr>
+                  <th>Tuesday</th>
+                  <td>8:30am - 6:00pm</td>
+                </tr>
+                <tr>
+                  <th>Wednesday</th>
+                  <td>8:30am - 5:30pm</td>
+                </tr>
+                <tr>
+                  <th>Thursday</th>
+                  <td>8:30am - 6:00pm</td>
+                </tr>
+                <tr>
+                  <th>Friday</th>
+                  <td>8:30am - 5:30pm</td>
+                </tr>
+                <tr>
+                  <th>Saturday</th>
+                  <td>9:00am - 1:00pm</td>
+                </tr>
+                <tr>
+                  <th>Sunday</th>
+                  <td>9:00am - 1:00pm</td>
+                </tr>
+                <tr>
+                  <th>Public Holidays</th>
+                  <td>9:00am - 1:00pm</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <div class="copyRight">
+          <p>
+            <span>©2020 Abc Medical Center </span> Xyz Street,Wxy land, VIC 3XXX
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- https://pakenhamfamilyhealth.com.au/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="clinic.js"></script>
+  </body>
+</html>
