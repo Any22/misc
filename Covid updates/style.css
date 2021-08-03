@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+.covidUpdate {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./image/covid19.jpg");
+  width: 100%;
+  min-height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Covid alert on image  */
+.covidTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(148, 104, 104, 0.3);
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 2rem;
+  text-align: justify;
+  height: 550px;
+}
+.covidTxt span {
+  font-size: 2rem;
+}
+.showResponse {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 550px;
+}
+.cases {
+  flex: 1;
+  width: 50vw;
+  line-height: 10px;
+  padding-left: 100px;
+  box-sizing: border-box;
+}
+.cases h4 {
+  text-align: center;
+}
+.cases label {
+  position: relative;
+  left: 150px;
+}
+.ozCase {
+  flex: 1;
+  width: 50vw;
+  line-height: 14px;
+  padding-left: 100px;
+}
+.ozCase h4 {
+  position: relative;
+  left: 50px;
+}
+.ozCase label {
+  position: relative;
+  left: 400px;
+}
+.confirmedCases,
+.newDeaths,
+.newRecovered {
+  position: relative;
+  bottom: 18px;
+  left: 350px;
+}
+.newConfirmedOz,
+.newDeathsOz,
+.newRecoveredOz {
+  position: relative;
+  bottom: 18px;
+  left: 200px;
+}
+.totalCases {
+  width: 50%;
+  line-height: 10px;
+  padding: 20px 10px;
+  border-top: white solid 3px;
+}
+.totalCases h4 {
+  text-align: center;
+}
+.totalCases label {
+  position: relative;
+  left: 180px;
+}
+.totalConfirmed,
+.totaldeaths,
+.totalRecovered {
+  position: relative;
+  bottom: 18px;
+  left: 350px;
+}
+
+@media only screen and (max-width: 350px) {
+  .showResponse {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .cases {
+    flex: 1;
+    width: 50vw;
+    line-height: 10px;
+    padding-left: 60px;
+    box-sizing: border-box;
+  }
+  .ozCase {
+    flex: 1;
+    width: 50vw;
+    line-height: 14px;
+    padding-left: 60px;
+  }
+  .totalCases {
+    width: 100vw;
+    line-height: 10px;
+    padding: 20px 10px;
+    border-top: white solid 3px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .covidTxt {
+    height: 630px;
+  }
+  .showResponse {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .cases,
+  .ozCase,
+  .totalCases {
+    width: 100vw;
+  }
+  .cases h4 {
+    position: relative;
+    right: 50px;
+  }
+  .cases label {
+    position: relative;
+    left: 0px;
+  }
+  .ozCase h4 {
+    position: relative;
+    left: 10px;
+  }
+  .confirmedCases,
+  .newDeaths,
+  .newRecovered {
+    position: relative;
+    left: 140px;
+  }
+  .newConfirmedOz,
+  .newDeathsOz,
+  .newRecoveredOz {
+    position: relative;
+    left: 140px;
+  }
+  .totalCases label {
+    position: relative;
+    left: 60px;
+  }
+  .totalConfirmed,
+  .totaldeaths,
+  .totalRecovered {
+    position: relative;
+    left: 200px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cases {
+    padding-left: 60px;
+    box-sizing: border-box;
+  }
+  .cases label {
+    position: relative;
+    left: 30px;
+  }
+  .confirmedCases,
+  .newDeaths,
+  .newRecovered {
+    position: relative;
+    left: 200px;
+  }
+  .totalCases label {
+    position: relative;
+    left: 40px;
+  }
+  .totalConfirmed,
+  .totaldeaths,
+  .totalRecovered {
+    position: relative;
+    bottom: 18px;
+    left: 200px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cases label {
+    position: relative;
+    left: 100px;
+  }
+  .confirmedCases,
+  .newDeaths,
+  .newRecovered {
+    position: relative;
+    left: 270px;
+  }
+
+  .totalCases label {
+    position: relative;
+    left: 120px;
+  }
+  .totalConfirmed,
+  .totaldeaths,
+  .totalRecovered {
+    position: relative;
+    bottom: 18px;
+    left: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .showResponse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 550px;
+  }
+  .cases {
+    flex: 1;
+    width: 50vw;
+    line-height: 10px;
+    padding-left: 100px;
+    box-sizing: border-box;
+  }
+  .cases h4 {
+    text-align: center;
+  }
+  .cases label {
+    position: relative;
+    left: 150px;
+  }
+  .confirmedCases,
+  .newDeaths,
+  .newRecovered {
+    position: relative;
+    bottom: 18px;
+    left: 350px;
+  }
+  .totalCases label {
+    position: relative;
+    left: 180px;
+  }
+  .totalConfirmed,
+  .totaldeaths,
+  .totalRecovered {
+    position: relative;
+    bottom: 18px;
+    left: 350px;
+  }
+}
