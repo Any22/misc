@@ -44,7 +44,6 @@ const inc2=target2/speed;
 };
 counter();
 
-// Filtering Australian cases  from the global data 
 const getOzData = () =>{
 const newConfirmedAustralia= data.Australia.All.confirmed;
 const newDeathsAustralia = data.Australia.All.deaths;
@@ -58,13 +57,12 @@ const ozStateSelect=document.querySelector(".state-select");
  {
   const states= document.getElementById("states").value  ;
   const stateName=event.target.value;
-  console.log(stateName); 
+
   document.getElementById("state-name").innerHTML = stateName;
-  console.log(states);
-  $("h4").color("green");
+
    if (states === event.target.value)
    {
-     
+     //bracket notation is used to access the key name with space
      document.getElementById("confirmedFigure").innerHTML = data["Australia"][stateName]["confirmed"];
      document.getElementById("deaths").innerHTML =data["Australia"][stateName]["deaths"];
      document.getElementById("recoveredFigure").innerHTML =data["Australia"][stateName]["recovered"];
@@ -72,6 +70,7 @@ const ozStateSelect=document.querySelector(".state-select");
    }
    
    else 
+   
      console.log("not avaialble");
  });    
 }
