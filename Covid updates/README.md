@@ -3,7 +3,8 @@
 
 ## Existing Functionality 
 - The App provides a summary of Covid-19 cases in Australia and rest of the world.
-- The Data is fetched from the server to update the Covid-19 information on website using GET endpoint /Summary. The total cases, total deaths and total recoveries and new cases can be obtained using the data. The cases can also be obtained based on Country name, Australian cases are filtered and displayed. 
+- The Data is fetched from the server to update the Covid-19 information on website using GET endpoint /Summary. 
+- Total confirmed cases, deaths and  recoveries can be observed . The cases can also be obtained by selecting the name of the states. 
 - To avoid accessing the server again and again ,the data is saved in json file.
  
 
