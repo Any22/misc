@@ -16,86 +16,70 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Covid updates</title>
+    <title>Covid Updates</title>
   </head>
   <body>
-    <div class="covidUpdate">
-      <div class="covidTxt">
-        <span><i class="fa fa-exclamation-triangle"></i></span>
-        <h3>Covid Updates</h3>
-        <br />
-        <!-- Global cases -->
-        <div class="showResponse">
-          <div class="cases">
-            <h4>Global Data</h4>
-            <br />
-            <label>New Confirmed</label>
-            <div class="confirmedCases">
-              <div id="confirmedCasesFigure">0</div>
+    <h2 class="mainHeading">Covid Updates</h2>
+    <br/>
+    <div id ="main-container">
+        <!-- <div id="taskcontainer"> -->
+            <div id ="cList" class="card"> 
+              <h4 class="globalData">Global Data</h4>
+              <br />
+                <label>Total Confirmed Cases<p id="confirmedCasesFigure">0</p></label>
+                <label>Total Deaths<p id="newDeathsFigure">0</p></label>
+                <label>Total Recovered Cases<p id="newRecoveredFigure">0</p></label> 
             </div>
-            <label>New Deaths</label>
-            <div class="newDeaths">
-              <div id="newDeathsFigure">0</div>
-            </div>
-            <label>New Recovered </label>
-            <div class="newRecovered">
-              <div id="newRecoveredFigure">0</div>
-            </div>
-          </div>
-          <!-- Australia  -->
-          <div class="ozCase">
-            <h4>Australian Data</h4>
-            <br />
-            <lable>Total Confirmed </lable>
-            <div class="newConfirmedOz">
-              <div id="oZResponse"></div>
-            </div>
-            <lable>Total Deaths </lable>
-            <div class="newDeathsOz">
-              <div id="oZResponse1"></div>
-            </div>
-            <lable>Total Recovered </lable>
-            <div class="newRecoveredOz">
-              <div id="oZResponse2"></div>
-            </div>
-          </div>
-        </div>
-        <!-- Total cases -->
-        <div class="australianStates">
-          <h4>Australian States</h4>
-          <!-- <label>Choose a state: -->
-            <select class="state-select" id="states" name="states" >
-                <option value="">--Please choose a state --</option>
-                <option value="Australian Capital Territory">Australian Capital Territory</option>
-                <option value="New South Wales">New South Wales</option>
-                <option value="Northern Territory">Northern Territory</option>
-                <option value="Queensland">Queensland</option>
-                <option value="South Australia">South Australia</option>
-                <option value="Tasmania">Tasmania</option>
-                <option value="Victoria">Victoria</option>
-                <option value="Western Australia">Western Australia</option>
-            </select>
-            <!-- </label> -->
-        </div>
-        <div class="totalCases">
-          <h4 id="state-name">State</h4><br/>
-          <label>Confirmed </label>
-          <div class="totalConfirmed">
-            <div id="confirmedFigure">0</div>
-          </div>
-          <label>Deaths</label>
-          <div class="totaldeaths">
-            <div id="deaths">0</div>
-          </div>
-          <label>Recovered</label>
-          <div class="totalRecovered">
-            <div id="recoveredFigure">0</div>
-          </div>
+            <br/>
+            <div id ="cList1" class="card"> 
+              <h4 class="australianData">Australian Data</h4>
+                <label>Total Confirmed Cases<p id="oZResponse"></p></label>
+                <label>Total Deaths<p id="oZResponse1"></p></label>
+                <label>Total Recovered<p id="oZResponse2"></p></label>
+            </div> 
+      <!-- Australian States data  -->
+          <br/>
+          <div id ="cList2" class="card">
+            <div class="color-div"></div>
+            <br/>
+             <label>Choose a State: 
+              <select class="state-select" id="states" name="states" >
+                  <option value="">--Choose a State--</option>
+                  <option value="Australian Capital Territory">Australian Capital Territory</option>
+                  <option value="New South Wales">New South Wales</option>
+                  <option value="Northern Territory">Northern Territory</option>
+                  <option value="Queensland">Queensland</option>
+                  <option value="South Australia">South Australia</option>
+                  <option value="Tasmania">Tasmania</option>
+                  <option value="Victoria">Victoria</option>
+                  <option value="Western Australia">Western Australia</option>
+              </select>
+              </label>  
+            <!-- <label>Choose a state: 
+              <select class="state-select" id="states" name="states" >
+                  <option value="">--Please choose a state --</option>
+              </select>  -->
+             <h4 id="state-name"></h4> 
+            <label>Confirmed Cases<p id="confirmedFigure">0</p></label>
+            <label>Deaths<p id="deaths">0</p></label>
+            <label>Recovered <p id="recoveredFigure">0</p></label>
         </div> 
-      </div>
+        <!-- </div> -->
     </div>
-
+  <!-- Charts  -->
+  <div class="chart-container">
+    <div class="gap"></div>
+    <div class="chart-one">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="gap"></div>
+    <br />
+    <div class="chart-two">
+      <canvas id="myChart1"></canvas>
+    </div>
+  </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script
