@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "sans-serif",monospace;
+  }
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background-color: #000000;
+    color:white;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  .header-div{
+      padding:10px;
+      background-color: #0c1720;
+      border-bottom:#6d6d6d solid 1px;
+  }
+  .header-info{
+      position:relative;
+      left:940px;
+      padding-top:7px;   
+  }
+  h2{
+    position:relative;
+    top:20px;
+    text-align: center;
+  }
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .globalData{
+    background-color: #ec0c53;
+  }
+  .australianData{
+    background-color: #289e80;
+  }
+  
+  
+  .dataDisplay{
+    border:green solid 3px;
+  }
+
+  .card{
+  text-align:center;
+  width:240px;
+  height:350px;
+  
+  background-color:#6c489e;
+  }
+  .card p{
+   font-size:1.5rem;
+  }
+  .card label{
+    font-size:0.75rem;
+    color:#ffffff;
+  }
+  .color-div{
+    height:29px;
+    width:236px;
+    color:#000000;
+   background-color:#ECB22E;
+  }
+  .chart-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+    width: 100%;
+    height: 500px;
+  }
+  .chart-one {
+    /* keeping height and width auto so the content can be adjusted itself when differnt screens are used  */
+    flex: 1;
+    height: 450px;
+    width: auto;
+    padding: 60px 10px;
+    box-sizing: border-box;
+  }
+  .gap{
+    width:60px;
+  }
+  .chart-two {
+    flex: 1;
+    box-sizing: border-box;
+    height: 450px;
+    /* border :green solid 2px; */
+    width: auto;
+    padding: 10px 10px;
+  }
+  #myChart1 {
+   margin:auto;
+    height: 350px !important;
+    width: 350px !important;
+  }
+  @media screen and (min-width: 200px) {
+    
+    #main-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+    
+  }
+  @media only screen and (max-width: 350px) {
+    #main-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+    .chart-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100vw;
+      height: auto;
+    }
+    .chart-one {
+      /* keeping height and width auto so the content can be adjusted itself when differnt screens are used  */
+      height: auto;
+      width: auto;
+      padding: 0px 10px;
+      box-sizing: border-box;
+    }
+    .chart-two {
+      height: auto;
+      width: auto;
+      padding: 10px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #main-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+    .chart-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100vw;
+      height: auto;
+    }
+    .chart-one {
+      /* keeping height and width auto so the content can be adjusted itself when differnt screens are used  */
+      height: auto;
+      width: auto;
+      padding: 0px 10px;
+      box-sizing: border-box;
+    }
+    .chart-two {
+      height: auto;
+      width: auto;
+      padding: 10px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    #main-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+    .chart-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 10px;
+      margin: auto;
+      width: 100vw;
+      height: auto;
+    }
+    .chart-one {
+        /* keeping height and width auto so the content can be adjusted itself when differnt screens are used  */
+        height: auto;
+        width: auto;
+        padding: 0px 10px;
+        box-sizing: border-box;
+      }
+    .chart-two {
+        height: auto;
+        width: auto;
+        padding: 10px;
+        margin: auto;
+        box-sizing: border-box;
+      }
+  }
+  @media only screen and (min-width: 992px) {
+    #main-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+   
+   
+    .chart-container {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 10px;
+      width: 100vw;
+      height: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    #main-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+    .chart-container {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* border: black solid 3px; */
+      padding: 10px;
+      width: 100vw;
+      height: auto;
+    }
+    /* .chart-one {
+      /* keeping height and width auto so the content can be adjusted itself when differnt screens are used  */
+      /* height: auto; */
+      /* width: auto; */
+      /* padding: 10px 30px; */
+      box-sizing: border-box;
+    /* } */ */
+    .chart-two {
+      height: auto;
+      width: auto;
+      padding: 10px 20px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+  }

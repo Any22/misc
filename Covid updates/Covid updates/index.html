@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css"/>  
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <title>Covid Updates</title>
+  </head>
+  <body>
+    <div class="header-div">
+    <p class="header-info">Coronavirus Hotline <i class="fas fa-phone"></i> 1800 675 398 </p>
+    </div>
+    <h2 class="mainHeading">Covid Updates</h2>
+    <br/>
+    <br/>
+    <div id ="main-container">
+      <div id ="cList" class="card"> 
+          <h4 class="globalData">Global Data</h4>
+            
+            <p id="confirmedCasesFigure">0</p>
+            <label>Total Confirmed Cases</label><br/>
+            <p id="newDeathsFigure">0</p>
+            <label>Total Deaths</label> <br/>
+            <p id="newRecoveredFigure">0</p>
+            <label>Total Recovered Cases</label> 
+      </div>
+      <div class="gap"></div>
+      <br/>
+      <div id ="cList1" class="card"> 
+          <h4 class="australianData">Australian Data</h4>
+            
+            <p id="oZResponse">0</p>
+            <label>Total Confirmed Cases</label><br/>
+            <p id="oZResponse1">0</p>
+            <label>Total Deaths</label><br/>
+            <p id="oZResponse2">0</p>
+            <label>Total Recovered</label>
+      </div> 
+      <!-- Australian States data  -->
+      <div class="gap"></div>
+          <br/>
+          <div id ="cList2" class="card">
+            <div class="color-div"><h4>Australian States</h4></div><br/>
+             <label>
+              <select class="state-select" id="states" name="states" >
+                  <option value="">--Choose a State--</option>
+                  <option value="Australian Capital Territory">Australian Capital Territory</option>
+                  <option value="New South Wales">New South Wales</option>
+                  <option value="Northern Territory">Northern Territory</option>
+                  <option value="Queensland">Queensland</option>
+                  <option value="South Australia">South Australia</option>
+                  <option value="Tasmania">Tasmania</option>
+                  <option value="Victoria">Victoria</option>
+                  <option value="Western Australia">Western Australia</option>
+              </select>
+              </label>  
+            <!-- <label>Choose a state: 
+              <select class="state-select" id="states" name="states" >
+                  <option value="">--Please choose a state --</option>
+              </select>  -->
+             <h6 id="state-name"></h6> 
+             <p id="confirmedFigure">0</p>
+            <label>Confirmed Cases</label>
+            <p id="deaths">0</p>
+            <label>Deaths</label>
+            <p id="recoveredFigure">0</p>
+            <label>Recovered </label>
+        </div>
+    </div>
+  <!-- Charts  -->
+  <br/>
+  <div class="chart-container">
+    <div class="gap"></div>
+    <div class="chart-one">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="gap"></div>
+    <br />
+    <div class="chart-two">
+      <canvas id="myChart1"></canvas>
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9f86d71ef6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
