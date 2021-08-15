@@ -110,7 +110,10 @@ new Chart("myChart", {
     legend: {display:false},
     title: {
       display: true,
-      text: "Covid-19 cases total recoverd"
+      text: "Total recoverd cases",
+      fontSize:15,
+      fontColor: "white",
+    
     }
   }
 });
@@ -127,7 +130,9 @@ new Chart("myChart1", {
   options: {
     title: {
       display: true,
-      text: "Covid-19 cases total deaths"
+      text: "Total deaths",
+      fontSize:20,
+      fontColor: "white",
     }
   }
 });

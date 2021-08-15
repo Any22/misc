@@ -18,14 +18,18 @@
     overflow-x: hidden;
   }
   .header-div{
-      padding:10px;
       background-color: #0c1720;
       border-bottom:#6d6d6d solid 1px;
   }
   .header-info{
       position:relative;
       left:940px;
-      padding-top:7px;   
+      padding-top:10px ;    
+  }
+  .header-info p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
   }
   h2{
     position:relative;
@@ -46,12 +50,9 @@
   .australianData{
     background-color: #289e80;
   }
-  
-  
   .dataDisplay{
     border:green solid 3px;
   }
-
   .card{
   text-align:center;
   width:240px;
@@ -87,11 +88,13 @@
     flex: 1;
     height: 450px;
     width: auto;
+    color:#ffffff;
     padding: 60px 10px;
     box-sizing: border-box;
   }
   .gap{
     width:60px;
+    height:180px;
   }
   .chart-two {
     flex: 1;
@@ -106,8 +109,72 @@
     height: 350px !important;
     width: 350px !important;
   }
+
+  .wrapper {
+    overflow: hidden;
+  }
+  .sliding-background {
+    position: relative;
+    top:220px;
+    height: 960px;
+    width: 6000px;
+  }
+  .sliding-background {
+    background: url("./image/covid-instructions.jpeg") repeat-x;
+    background-size: 500px ;
+    height: 500px;
+    width: 5076px;
+  }
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1692px, 0, 0);
+    }
+  }
+  .sliding-background {
+    background: url("./image/covid-instructions.jpeg") repeat-x;
+    background-size: 500px ;
+    height: 500px;
+    width: 5076px;
+    animation: slide 60s linear infinite;
+  }
+  
+  footer {
+    position: relative;
+    padding:30px;
+    height:90px;
+    width: 100vw;
+    background-color:#0c1720;
+    color: white;
+    font-size: 24px;
+  }
+  .main-footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+  }
+  /*  creating space between social icons  */
+  .social_link a span {
+    margin-top: 10px;
+    height: 20px;
+    width: 80px;
+    color: white;
+  }
+  .copyRight {
+    text-align: center;
+    background-color: rgb(158, 155, 155);
+    font-size: 14px;
+    color: white;
+    overflow-y: hidden;
+  }
+  
   @media screen and (min-width: 200px) {
-    
+    .header-info{
+      font-size: small;   
+  }
     #main-container {
         display: flex;
         flex-direction: row;
@@ -115,9 +182,40 @@
         align-items: center;
         justify-content: center;
       }
+      .chart-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: auto;
+      }
+      .chart-one {
+        /* keeping height and width auto so the content can be adjusted itself when differnt screens are used  */
+        height: auto;
+        width: auto;
+        padding: 0px 10px;
+        box-sizing: border-box;
+      }
+      .chart-two {
+        height: auto;
+        width: auto;
+        padding: 10px;
+        margin: auto;
+        box-sizing: border-box;
+      }
+      .social_link a span {
+        margin-top: 10px;
+        height: 20px;
+        width: 60px;
+        color: white;
+      }
+      
     
   }
   @media only screen and (max-width: 350px) {
+    .header-info{
+      font-size: small;
+  } 
     #main-container {
         display: flex;
         flex-direction: column;
@@ -149,6 +247,12 @@
   }
   
   @media screen and (max-width: 600px) {
+    .header-info{
+      position:relative; 
+      left:30px;
+      padding-top:10px ;  
+      
+  }
     #main-container {
         display: flex;
         flex-direction: column;
@@ -177,8 +281,29 @@
       margin: auto;
       box-sizing: border-box;
     }
+    .gap{
+      height:60px;
+    }
+    .copyRight {
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      overflow-y: hidden;
+    }
+    /* color is changing here for copy right text*/
+    .copyRight span {
+      position:relative;
+      top:50px;
+      color: #ffffff;
+    }
   }
   @media only screen and (min-width: 768px) {
+    .header-info{
+      position:relative; 
+      left:30px;
+      padding-top:10px ;  
+      
+  }
     #main-container {
         display: flex;
         flex-direction: column;
@@ -186,6 +311,7 @@
         align-items: center;
         justify-content: center;
       }
+     
     .chart-container {
       display: flex;
       flex-direction: row;
@@ -202,6 +328,7 @@
         padding: 0px 10px;
         box-sizing: border-box;
       }
+      
     .chart-two {
         height: auto;
         width: auto;
@@ -209,6 +336,11 @@
         margin: auto;
         box-sizing: border-box;
       }
+      .gap{
+        /* width:60px; */
+        height:80px;
+      }
+
   }
   @media only screen and (min-width: 992px) {
     #main-container {
@@ -218,8 +350,6 @@
         align-items: center;
         justify-content: center;
       }
-   
-   
     .chart-container {
       display: inline-flex;
       flex-direction: row;
@@ -247,13 +377,7 @@
       width: 100vw;
       height: auto;
     }
-    /* .chart-one {
-      /* keeping height and width auto so the content can be adjusted itself when differnt screens are used  */
-      /* height: auto; */
-      /* width: auto; */
-      /* padding: 10px 30px; */
-      box-sizing: border-box;
-    /* } */ */
+    
     .chart-two {
       height: auto;
       width: auto;
